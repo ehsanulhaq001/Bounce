@@ -3,7 +3,9 @@ let sx, sy;
 let cnv = document.querySelector("#canvas");
 let ctx = cnv.getContext("2d");
 let speed = document.querySelector("#speed").value;
+let mobile = 0.5;
 cnv.width = window.innerWidth;
+let mobwid = cnv.width;
 cnv.height = window.innerHeight;
 cnv.style.backgroundColor = "black";
 document.addEventListener("keydown", keyPush);
@@ -15,6 +17,11 @@ function start() {
 }
 
 function setup() {
+    if (mobwid < 1000) {
+        mobile = 0.5;
+    } else {
+        mobile = 1;
+    }
     bx = cnv.width / 2;
     by = cnv.height * 5 / 6;
     sx = cnv.width / 2;

@@ -1,7 +1,7 @@
 function Shooter(x, y) {
     this.x = x;
     this.y = y;
-    this.w = 100;
+    this.w = 100 * mobile;
     this.xv = 0;
     this.show = function() {
         ctx.beginPath();

@@ -3,7 +3,7 @@ function Ball(x, y) {
     this.y = y;
     this.xv = 4 * speed;
     this.yv = -4 * speed;
-    this.w = 20
+    this.w = 20 * mobile;
 
     this.update = function() {
 
